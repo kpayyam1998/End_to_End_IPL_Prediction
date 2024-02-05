@@ -1,4 +1,15 @@
-## End_to_End_ML-IPL_Prediction
+## End_to_End_ML-IPL_Score_Prediction  machine learning project with deployment
+
+This repository contains the complete end-to-end machine learning project.
+
+# Clone this repo 
+    1.Create one virtual environment.i haven't created,for me its worked but better to create one VE.
+    2.Once you cloned this repo you need to install the needed lib if not installed in your machine.
+# run the IPL Score Prediction end to end ML
+    1. pkl wasnt worked for me so that i have converted model to bin file which i used my flask web application.
+    2. Then you have to learn some basics of creating flask application and alse we have to learn  the folder structure as well.
+    3. once you have  set up  all the requirement just run the app.py file it will redirect to webpage.
+
 
 Step 1 : Install latest version of VSCODE (I have used latest version )
 
