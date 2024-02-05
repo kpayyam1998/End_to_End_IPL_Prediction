@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../CSS/prediction.css"> -->
+    <script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='prediction.css')}}">
+   
+</head>
+<style>
+   
+</style>
+
+</style>
+
+<body>
+
+<header class="header">
+    <h3 class="ipl-title">IPL SCORE PREDICTION</h3>
+</header>
+<!-- <header class="">
+    
+</header> -->
+
+    <!-- Cricket Form -->
+    <div class="cricket-form">
+        <form action="{{url_for('predict')}}" method="POST" id="cricketForm">
+            <div class="form-group">
+                <label for="batting-team">Batting Team</label>
+                <select id="bat_team" class="form-control" name="bat_team"  required>
+                    <option value="Chennai Super Kings" selected>Chennai Super Kings</option>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select><br>
+            </div>
+            <div class="form-group">
+                <label for="bowling-team">Bowling Team</label>
+                <select id="bowl_team" class="form-control" name="bowl_team" required>
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="overs">Overs</label>
+                <input type="number" id="overs" class="form-control" placeholder="Enter Overs(1 to 20)" name="overs" required>
+            </div>
+            <div class="form-group">
+                <label for="runs">Runs</label>
+                <input type="number" id="runs" class="form-control" placeholder="Enter Runs(i.e:99)" name="runs" required>
+            </div>
+            <div class="form-group">
+                <label for="wickets">Wickets</label>
+                <input type="number" id="wickets" class="form-control" placeholder="Enter Wickets(ie:3)" name="wickets" required>
+            </div>
+            <div class="form-group">
+                <label for="runs-prev-over">Last 5 Over runs</label>
+                <input type="number" id="runs_prev_over" class="form-control" placeholder="Enter Runs in Previous Over(ie:44):)"
+                    name="runs_prev_over" required>
+            </div>
+            <div class="form-group">
+                <label for="wickets-prev-over">Wickets in Last 5 Over</label>
+                <input type="number" id="wick_prev_over" class="form-control" placeholder="Enter Wickets in Previous Over(ie:2)"
+                    name="wick_prev_over" required>
+            </div>
+            <!-- <button type="submit" class="btn btn-submit" data-toggle="modal" data-target="#resultModal">Submit</button> -->
+            <!-- <button type="submit" class="btn btn-submit">Submit</button> -->
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <div>
+                <h2 class="final-result">FInal score will be:{{final_result}}</h2>
+            </div>
+
+            <!-- <a href="abc.pdf" download="cd.pdf">download dataset</a> -->
+            <a href="abc.pdf" download>Download the pdf</a>
+
+        </form>
+    </div>
+    
+</body>
+
+</html>
+
+
+
+
